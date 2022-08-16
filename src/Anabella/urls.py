@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from ProyectoWebApp import views #Importamos desde la app esta las views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.home, name="Home"), #Aca llamamos las urls de views de de la app importada. comillas vacias porque no se tiene nombre de inicio y el nombre será "name" será equivalente al de las diferentes views importadas. Luego irá el views, punto más nombre de la función de la app en views.
+    path('servicios', views.servicios, name="Servicios"),
+    path('tienda', views.tienda, name="Tienda"),
+    path('blog', views.blog, name="Blog"),
+    path('contacto', views.contacto, name="Contacto"),
 ]
