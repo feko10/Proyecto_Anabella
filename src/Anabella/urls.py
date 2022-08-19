@@ -13,16 +13,18 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path
-from ProyectoWebApp import views #Importamos desde la app esta las views
 
+from django.contrib import admin
+from django.urls import path, include
+#Importamos desde la app esta las views
+#LO QUE SE HIZO ACA FUE CREAR LOS PRIMEROS URLS PATTERN (SUS PATH) Y SE LOS CORTO Y PEGÓ EN URLS.PY DEL PROYECTOWEBAPP CREADO, Y LUEGO ENLAZARLOS MEDIANTE EL SEGUNDO PATH CREADO, TENGA UN '' PARA QUE PUEDA TOMAR TODOS LOS PATHS DESDE LA PAGINA HOME, PERO QUE INCLUYA (INCLUDE) LAS URLS DE ESA APP, EN EL QUE VA A TOMAR LA URLS PROYECTOWEBAPP/* EL NOMBRE DE LOS RESTO DE LAS URLS.
+# ADEMAS DEBEMOS IMPORTAR, APARTE DE PATH, LA FUNCIÓN INCLUDE ARRIBA.
+#ESTE PROCESO SE HACE POR TANTAS APPS TENGA.
+#LO UNICO QUE QUEDO FUE EL PATH ADMIN Y EL PATH MENCIONADO LINEA ARRIBA.
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name="Home"), #Aca llamamos las urls de views de de la app importada. comillas vacias porque no se tiene nombre de inicio y el nombre será "name" será equivalente al de las diferentes views importadas. Luego irá el views, punto más nombre de la función de la app en views.
-    path('servicios', views.servicios, name="Servicios"),
-    path('tienda', views.tienda, name="Tienda"),
-    path('blog', views.blog, name="Blog"),
-    path('contacto', views.contacto, name="Contacto"),
+    path('', include('ProyectoWebApp.urls')),
+
+
 ]
