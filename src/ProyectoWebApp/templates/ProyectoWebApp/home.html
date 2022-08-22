@@ -1,11 +1,12 @@
 <html>
 
 <head>
+<!-- con este load, configuramos DJANGO para que tome en cuenta archivos statics. 
+Luego vamos al link href y agregamos  -->
+    {% load static %}
 
-
-
-    <!-- Bootstrap -->
-    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap. Este era el link original <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 3:42-->
+    <link href="{% static 'ProyectoWebApp/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
      <!-- Fonts -->
     
@@ -14,12 +15,12 @@
      
 
 
-    <!-- Styles -->
+    <!-- Styles. ENTRANDO EN VSC, A ESTE ARCHIVO PODEMOS MODIFICAR EL FORMATO -->
     <link href="/css/gestion.css" rel="stylesheet">
 
        <!-- ACA ARRIBA DE TODO VAN LOS LINK DE BOOTSTRAP, DE ENLACE EXTERNO.
       EL SEGUNDO SON LAS FUENTES (FONTS), CUYO ENLACE EXTERNO VIENE DE GOOGLE.
-    FINALMENTE EN "STYLES" SE MENCIONA EL ARCHIVO DE GESTION CSS QUE TENEMOS DESCARGADO TIPO STATICS. -->  
+    FINALMENTE EN "STYLES" SE MENCIONA EL ARCHIVO DE GESTION CSS QUE TENEMOS DESCARGADO TIPO STATICS. ES DECIR, HAY ENLANCES EXTERNOS COMO DERIVACIONES INTERNOS -->  
 </head>
 
 <body>
@@ -30,48 +31,47 @@
       </h1>
 
 
- <!-- Navbar. ESTO ES LA BARRA DE NAVEGACION -->
+      <!-- Navbar -->
  <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="home.html">Gestión de Pedidos</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item active px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="home.html">Inicio</a>
-          </li>
-          <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="servicios.html">Servicios</a>
-          </li>
-          <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="tienda.html">Tienda</a>
-          </li>
-          <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="contacto.html">Contacto</a>
-          </li>
-          <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="blog.html">Blog</a>
-          </li>
-          <!-- ACA ESTAN LOS DIFERENTES LINK DE ENLACES CON LAS PAGINAS -->
-        </ul>
-      </div>
+  <div class="container">
+    <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="home.html">Gestión de Pedidos</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active px-lg-4">
+          <a class="nav-link text-uppercase text-expanded" href="home.html">Inicio</a>
+        </li>
+        <li class="nav-item px-lg-4">
+          <a class="nav-link text-uppercase text-expanded" href="servicios.html">Servicios</a>
+        </li>
+        <li class="nav-item px-lg-4">
+          <a class="nav-link text-uppercase text-expanded" href="tienda.html">Tienda</a>
+        </li>
+        <li class="nav-item px-lg-4">
+          <a class="nav-link text-uppercase text-expanded" href="contacto.html">Contacto</a>
+        </li>
+        <li class="nav-item px-lg-4">
+          <a class="nav-link text-uppercase text-expanded" href="blog.html">Blog</a>
+        </li>
+       
+      </ul>
     </div>
-  </nav>
-
-
-   <!-- Heading. ESTA ES LA CABECERA PARA EL SITIO WEB -->
+  </div>
+</nav>
+ 
+   <!-- Heading -->
    <section class="page-section clearfix">
     <div class="container">
       <div class="intro">
         <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="/img/principal.jpg" alt="">
         <div class="intro-text left-0 text-center bg-faded p-5 rounded">
           <h2 class="section-heading mb-4" >
-            <span class="section-heading-upper">Puntualidad</span>
-            <span class="section-heading-lower">El mejor stock</span>
+            <span class="section-heading-upper">Excelencia Profesional</span>
+            <span class="section-heading-lower">y Dedicación</span>
           </h2>
-          <p class="mb-3">En la puertra de tu casa en menos de 48 h con el envío normal. En menos de 24 h con el envío express.
+          <p class="mb-3">Nos dedicamos y enfatizamos en las particularidades de cada paciente, haciendo un seguimiento y atención personalizado.
           </p>
          
         </div>
@@ -79,9 +79,8 @@
     </div>
   </section>
 
-
   
-    <!-- Message -->
+    <!-- Heading -->
     <section class="page-section cta">
       <div class="container">
         <div class="row">
@@ -89,9 +88,9 @@
             <div class="cta-inner text-center rounded">
               <h2 class="section-heading mb-4">
                 <span class="section-heading-upper">Compromiso total</span>
-                <span class="section-heading-lower">Garantizado</span>
+                <span class="section-heading-lower">garantizado</span>
               </h2>
-              <p class="mb-0">Con más de 75 años de experiencia a nuestras espaldas, desde Gestión de Pedidos tenemos los conocimientos y herramientas necesarios para llevar cualquier objeto a la puerta de su casa con puntualidad y profesionalidad.</p>
+              <p class="mb-0">Con más de 10 años de experiencia a nuestras espaldas,  tenemos los conocimientos y herramientas necesarias para llevar adelante la gestión nutricional con profesionalidad.</p>
             </div>
           </div>
         </div>
@@ -127,7 +126,7 @@
         	<a href="sample.html" class="link">Aviso legal</a> ·
         	<a href="sample.html" class="link">Cookies</a>
 		</p>
-        <p class="m-0 mbt1">&copy; Gestión de Pedidos 2020</p>
+        <p class="m-0 mbt1">&copy; Anabella Dal Lago. Copyright 2022</p>
       </div>
 	</footer>
 

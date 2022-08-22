@@ -1,0 +1,4 @@
+"""Aca descomprimimos varios archivos. En esta carpeta se crea un folder llamado static, porque van los archivos estaticos para renderizar.
+Aquí va una carpeta css con un archivo de gestión de este tipo de terminacion.
+en img, van las imagenes que podemos usar
+Luego en vendor tenemos archivos que vienen con bootsrap. Que se descargó.
