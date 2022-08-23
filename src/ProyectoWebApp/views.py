@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponse
 
 # Create your views here. Aca van las diferentes funciones que tendrá esta aplicación.
-
+#ORM -> mapeo de objeto relacional. Se crea un codigo que representa una tabla de BD. Es una forma de eventualmente se pueda, con un código vincular a python con una tabla y registro de BD. Esto se crea en los archivos models.py
 """def home(request):
     return HttpResponse("home")
     

@@ -1,6 +1,11 @@
-body {
+
+/*!
+ACA EN BACKGROUND VA LA IMAGEN DE FONDO
+src="{% static 'ProyectoWebApp/img/principal.png' %}"
+ */
+ body {
   font-family: 'Lora';
-  background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/bg_main.jpg");
+  background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/bg_main.jpg"); 
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -80,7 +85,7 @@ p {
 }
 
 #mainNav {
-  background-color: rgba(24, 64, 8);
+  background-color: rgb(160, 148, 38);
   font-family: 'Raleway';
 }
 
@@ -94,7 +99,7 @@ p {
 }
 
 #mainNav .navbar-nav .nav-item.active .nav-link {
-  color: #7b8d2b;
+  color: #b9c421;
   text-decoration: underline;
 }
 
@@ -107,7 +112,7 @@ p {
     text-decoration: underline;
   }
   #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-    color: #3ba77d;
+    color: #a7853b;
     text-decoration: underline;
   }
 }
@@ -134,7 +139,7 @@ p {
     left: 600;
     width: 60%;
     margin-top: 3rem;
-    background-color: rgba(24, 64, 8);
+    background-color: rgb(70, 175, 28);
     color: rgb(117, 102, 43);
     position: absolute;
   }
@@ -162,8 +167,8 @@ p {
   position: relative;
   padding: 3rem;
   margin: 0.5rem;
-  background-color: rgba(24, 64, 8);
-  color: cornsilk;
+  background-color: rgb(189, 49, 24);
+  color: rgb(163, 138, 36);
 }
 
 .cta .cta-inner:before {
@@ -181,7 +186,7 @@ p {
   position: relative;
   padding: 3rem;
   margin: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(176, 209, 30, 0.85);
 }
 
 @media (min-width: 992px) {
@@ -229,7 +234,7 @@ p {
 }
 
 .footer {
-   background-color: rgba(24, 64, 8, 0.8);
+   background-color: rgba(201, 169, 29, 0.8);
 }
 
 
