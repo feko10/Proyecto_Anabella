@@ -11,10 +11,11 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+"""ESTA VARIABLE LE DICE A DJANGO, POR EJEMPLO, QUE CONSTRUYA PATH DENTRO DE DE ESE PROYECTO"""
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -85,7 +86,7 @@ DATABASES = {
         'PORT': '3306',
     }
 }
-
+"""ESTA VARIABLE LE DICE A DJANGO, POR EJEMPLO, QUE TRABAJE CON LA BASE DE DATOS QUE FIGURA EN NAME"""
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -109,9 +110,12 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+#LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-ar'
 
-TIME_ZONE = 'UTC'
+
+#TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Argentina/Buenos_Aires'
 
 USE_I18N = True
 
@@ -127,3 +131,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_URL= '/media/'
+MEDIA_ROOT='media'
+#En el primer caso le decimos la URL pública a django que tiene que aparecera en la barra de navegación y en el segundo a qué carpeta tiene que ir DJANGo. os.path.join(BASE_DIR, 'media').
+#
