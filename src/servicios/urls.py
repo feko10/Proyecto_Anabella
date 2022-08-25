@@ -6,6 +6,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 #En estos dos últimos import, le decimos a DJANGO que desde la configuración de django importe las configuraciones de setting y los archivos estaticos. Especificamente en este último le decimos que busque, dentro de la configuración de urls, y dentro de ello el dir statics.
 #En el caso del import de settings, importamos todo porque allí seleccionamos creamos las variables de las carpetas medias y deberían figurar acá también.
+urlpatterns = [
+    path('', views.servicios, name="Servicios"),
+    
+    #No es necesario poner "servicios" al path en este caso porque estamos dentro de la app servicios. Entonces la raiz queda así: " ", porque se entienda que la raiz es /servicios mismo
+]
 
 
 #urlpatterns +=static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

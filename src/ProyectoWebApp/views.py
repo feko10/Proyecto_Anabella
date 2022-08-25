@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from servicios.models import Servicio
+
 
 # Create your views here. Aca van las diferentes funciones que tendrá esta aplicación.
 #ORM -> mapeo de objeto relacional. Se crea un codigo que representa una tabla de BD. Es una forma de eventualmente se pueda, con un código vincular a python con una tabla y registro de BD. Esto se crea en los archivos models.py
@@ -22,13 +22,13 @@ def tienda(request):
 def home(request):
     return render(request, "ProyectoWebApp/home.html")
 
-def servicios(request):
-    servicios=Servicio.objects.all()
-    return render(request, "ProyectoWebApp/servicios.html", {"servicios": servicios})
-
 def tienda(request):
     return render(request, "ProyectoWebApp/tienda.html")
-#SE CORTO LA FUNCION DE SERVICIOS Y SE LA LLEVÓ A UN ARCHIVO VIEWS.PY DENTRO DE LA APP SERVICIOS
+
+"""def servicios(request):
+    servicios=Servicio.objects.all()
+    return render(request, "ProyectoWebApp/servicios.html", {"servicios": servicios})
+#SE CORTO LA FUNCION DE SERVICIOS Y SE LA LLEVÓ A UN ARCHIVO VIEWS.PY DENTRO DE LA APP SERVICIOS"""
 def blog(request):
     return render(request, "ProyectoWebApp/blog.html")
 
