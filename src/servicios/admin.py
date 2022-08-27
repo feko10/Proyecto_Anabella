@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Servicio #Con el . indicamos que el archivo está dentro del mismo directorio
+from .models import Servicio #Con el . indicamos que el archivo está dentro del mismo directorio, luego invocamos las clases de views.
 class ServicioAdmin(admin.ModelAdmin):
     readonly_fields=("created", "update") #Con esta variable le decimos a Django que lea dos registros de nuestra BD que no aparece porque son de "solo lectura"
 # Register your models here. Aca registramos la app de servicios para que aparezca luego en el url /admin/.

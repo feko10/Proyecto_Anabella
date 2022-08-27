@@ -28,9 +28,10 @@ def tienda(request):
 """def servicios(request):
     servicios=Servicio.objects.all()
     return render(request, "ProyectoWebApp/servicios.html", {"servicios": servicios})
-#SE CORTO LA FUNCION DE SERVICIOS Y SE LA LLEVÓ A UN ARCHIVO VIEWS.PY DENTRO DE LA APP SERVICIOS"""
+
 def blog(request):
     return render(request, "ProyectoWebApp/blog.html")
+#SE CORTO LA FUNCION DE SERVICIOS Y SE LA LLEVÓ A UN ARCHIVO VIEWS.PY DENTRO DE LA APP SERVICIOS"""
 
 def contacto(request):
     return render(request, "ProyectoWebApp/contacto.html")

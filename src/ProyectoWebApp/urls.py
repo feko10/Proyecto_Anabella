@@ -16,7 +16,6 @@ urlpatterns = [
     path('', views.home, name="Home"), #Aca llamamos las urls y en el sengundo parametros las vinculamos con las views de de la app importada. comillas vacias porque no se tiene nombre de inicio y el nombre será "name" será equivalente al de las diferentes views importadas. Luego irá el views, punto más nombre de la función de la app en views.
 
     path('tienda', views.tienda, name="Tienda"),
-    path('blog', views.blog, name="Blog"),
     path('contacto', views.contacto, name="Contacto"),
 
 ]
