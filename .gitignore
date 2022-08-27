@@ -1,0 +1,4 @@
+*.pyc
+dd.sqlite3
+local.py
+
