@@ -9,7 +9,7 @@ def blog(request):
 def categoria(request, categoria_id):
     categoria=Categoria.objects.get(id=categoria_id)
     posts=Post.objects.filter(categorias=categoria)
-    return render(request, "blog/categoria.html", {"categoria": categoria}, {"posts": posts})
+    return render(request, "blog/categoria.html", {"categoria": categoria,"posts": posts})
 #Esta función se vinculará a categorias.html y además del request, usa como parametro el nombre de alguna columna de la base de datos que queremos que tome.
 #Luego creamos una variable (categoria) que tome de la clase categoria sus objetos, pero filtrados (get) por categoria id.
 #Después creamos otra variable que sea igual a todos los posts, pero filtrado por la variable categoria.
