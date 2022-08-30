@@ -33,8 +33,7 @@ def blog(request):
     return render(request, "ProyectoWebApp/blog.html")
 #SE CORTO LA FUNCION DE SERVICIOS Y SE LA LLEVÓ A UN ARCHIVO VIEWS.PY DENTRO DE LA APP SERVICIOS"""
 
-def contacto(request):
-    return render(request, "ProyectoWebApp/contacto.html")
+
     
 """
 #Terminado esa parte inicial, vamos a crear una carpeta templates en ProyectoWebApp y luego una subcarpeta con el mismo nombre de nuestra app que ya mencionamos. Luego hacemos los html de cada función.

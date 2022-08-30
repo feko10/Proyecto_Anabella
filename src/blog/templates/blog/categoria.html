@@ -55,9 +55,8 @@ Para encontrar sentido a esto recordar que todas estas instrucciones estas dentr
     Categorías: 
  {% for post in posts %}
   {% for categoria in post.categorias.all %}
- 
-    
-    {{categoria.nombre}}  &nbsp; <!--&nbsp; &nbsp; esto sirve para dar espacios entre cada elemento de categoría-->
+  <a href="{% url 'categoria' categoria.id%}" class="linksCategorias">{{categoria.nombre}}</a>  &nbsp; <!--&nbsp; &nbsp; esto sirve para dar espacios entre cada elemento de categoría. con el "a href le decimos a Django que nos cree un vinculo de url que nos lleve al path "categoria", y de ahi le pasamos por parametro categoria.id, tal como figura en la tabla de la base de datos.
+  En otra vertiente creamos en nuestro archivo gestion.css una class linkCateg...que nos dice que esta clase deja en blanco los textos con guionbajo-->
     {% endfor %}
   {% endfor %}
 </div>

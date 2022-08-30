@@ -44,16 +44,16 @@ Luego vamos al link href y agregamos  -->
         <li class="nav-item {% if request.path == '/' %} active {% endif %} px-lg-4"> <!-- el "active" hace que el icono aparezca activo, entonces se pone el codigo if request es igual a la url...(en este caso home es la / sola) -->
           <a class="nav-link text-uppercase text-expanded" href="{% url 'Home' %}">Inicio</a>
         </li> <!-- en cada uno de estos se vincula el url de cada html -->
-        <li class="nav-item {% if request.path == '/Servicios' %} active {% endif %} px-lg-4">
+        <li class="nav-item {% if request.path == '/servicios/' %} active {% endif %} px-lg-4"><!-- las dobles barras entre el path permiten que quede marcado el url cuando estamos usando en el sitioweb, si usamos una sola / no pasa eso -->
           <a class="nav-link text-uppercase text-expanded" href="{% url 'Servicios' %}">Servicios</a>
         </li>
-        <li class="nav-item {% if request.path == '/Tienda' %} active {% endif %} px-lg-4">
+        <li class="nav-item {% if request.path == '/tienda/' %} active {% endif %} px-lg-4">
           <a class="nav-link text-uppercase text-expanded" href="{% url 'Tienda' %}">Tienda</a>
         </li>
-        <li class="nav-item {% if request.path == '/Contacto' %} active {% endif %} px-lg-4">
+        <li class="nav-item {% if request.path == '/contacto/' %} active {% endif %} px-lg-4">
           <a class="nav-link text-uppercase text-expanded" href="{% url 'Contacto' %}">Contacto</a>
         </li>
-        <li class="nav-item {% if request.path == '/Blog' %} active {% endif %} px-lg-4">
+        <li class="nav-item {% if request.path|slice:':6' == '/blog/' %} active {% endif %} px-lg-4"> <!-- con |slice le decimos que aplica esta clase a todo lo que le siga después de 6 caracteres (que es despues de blog/) -->
           <a class="nav-link text-uppercase text-expanded" href="{% url 'Blog' %}">Blog</a>
         </li>
        

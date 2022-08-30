@@ -10,4 +10,4 @@ from django.shortcuts import render, HttpResponse
 def servicios(request):
     servicios=Servicio.objects.all()
     return render(request, "servicios/servicios.html", {"servicios": servicios})
-#CON ESTO LE INDICAMOS QUE BUSCQUE DENTRO DE SERVICIOS, EL ARCHIVO SERVICIOS.HTML
+#CON ESTO LE INDICAMOS QUE BUSQUE DENTRO DE SERVICIOS, EL ARCHIVO SERVICIOS.HTML
