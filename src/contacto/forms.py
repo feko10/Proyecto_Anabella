@@ -4,5 +4,5 @@ from django import forms
 class formularioContacto(forms.Form):
     nombre=forms.CharField(label="Nombre", required=True) #Se crea los diferentes campos. La variable nombre es igual a un campo de caracteres cuyo nombre es "nombre" y el required True exige que se haga complete el campo.
     email=forms.CharField(label="Email", required=True)
-    contenido=forms.CharField(label="Contenido")
+    contenido=forms.CharField(label="Contenido", widget=forms.Textarea) #El textarea es para que el formulario se forme un cuadro de dialgo más amplio para escribir más.
 

@@ -5,6 +5,12 @@
 
 {% block contenido %} <!-- Aca se dice que cargue todo lo que está en la carpeta static -->
 
-<div><p style="color: white">{{miFormulario}}
-</p></div>
+<div class="contenedorFormulario">
+    <form action="" method="POST" style="text-align: center;">{% csrf_token %} 
+        <table style="color: rgb(0, 0, 0); margin: 20px auto;">{{miFormulario.as_table}}</table>
+        <input type="submit" value="Enviar" style="width: 150px;">
+    </form>
+</div>
 {% endblock contenido %}
+<!-- la etiqueta table y el formulario.as_table pide a django que muestre en el sitio un formulario (como si fuera una tabla) y el estilo será en formato de tabla. El div class llama a la clase contenedorFormulario que hace que el color de fondo sea de ese color -->
+<!-- El form action y el method POST es para que envie la información de manera segura. El {% csrf_token %} hay que poner si o si porque es una medidad de seguridad para evitar que nos colen informacion. La tabla tendra un estilo, un color, un margin que separa este apartado del footer y el navbar y el auto que lo hace responsive. Luego tenemos un input que es submit porque envia  -->
