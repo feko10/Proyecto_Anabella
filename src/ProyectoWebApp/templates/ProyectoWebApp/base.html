@@ -51,7 +51,7 @@ Luego vamos al link href y agregamos  -->
           <a class="nav-link text-uppercase text-expanded" href="{% url 'Tienda' %}">Tienda</a>
         </li>
         <li class="nav-item {% if request.path == '/contacto/' %} active {% endif %} px-lg-4">
-          <a class="nav-link text-uppercase text-expanded" href="{% url 'Contacto' %}">Contacto</a>
+          <a class="nav-link text-uppercase text-expanded" href="{% url 'Contacto' %}">Turnos</a>
         </li>
         <li class="nav-item {% if request.path|slice:':6' == '/blog/' %} active {% endif %} px-lg-4"> <!-- con |slice le decimos que aplica esta clase a todo lo que le siga después de 6 caracteres (que es despues de blog/) -->
           <a class="nav-link text-uppercase text-expanded" href="{% url 'Blog' %}">Blog</a>
