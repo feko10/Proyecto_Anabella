@@ -22,8 +22,8 @@ def tienda(request):
 def home(request):
     return render(request, "ProyectoWebApp/home.html")
 
-def tienda(request):
-    return render(request, "ProyectoWebApp/tienda.html")
+"""def tienda(request):
+    return render(request, "ProyectoWebApp/tienda.html")"""
 
 """def servicios(request):
     servicios=Servicio.objects.all()

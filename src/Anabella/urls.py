@@ -29,5 +29,6 @@ urlpatterns = [
     path('servicios/', include('servicios.urls')),
     path('blog/', include('blog.urls')),
     path('contacto/', include('contacto.urls')),
+    path('tienda/', include('tienda.urls')),
 ]
 #En sintesis sobre estos patrones: tenemos en la url del proyecto general, le decimos que por cada urls que ingrese en esas direcciones incluya el las direcciones de url de la misma app

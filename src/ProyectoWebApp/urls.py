@@ -14,15 +14,14 @@ from django.conf.urls.static import static
 urlpatterns = [
 
     path('', views.home, name="Home"), #Aca llamamos las urls y en el sengundo parametros las vinculamos con las views de de la app importada. comillas vacias porque no se tiene nombre de inicio y el nombre será "name" será equivalente al de las diferentes views importadas. Luego irá el views, punto más nombre de la función de la app en views.
-
-    path('tienda', views.tienda, name="Tienda"),
+    
 
 ]
-
 urlpatterns +=static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 #Con este le decimos, que a urlpatterns, es decir la variable de arriba le agregue los archivos staticos dentro de setting.MEDIA_URL y le indicamos la raiz (document_root) que es igual al archivo settings y dentro de ell"a la variable mediaroot"""
 
 """path('admin/', admin.site.urls), 
     path('servicios/', include('servicios.urls')), #el include quiere decir que se incluyan todos los path que hay en urls de la app servicios
     path('', include('ProyectoWebApp.urls')), 
+    path('', views.tienda, name="Tienda"),
 """
