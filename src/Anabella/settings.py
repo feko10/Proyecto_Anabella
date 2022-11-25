@@ -146,5 +146,5 @@ EMAIL_USE_TLS=True
 EMAIL_PORT=587
 EMAIL_HOST_USER="fkozakgrassini@gmail.com"
 #"creandohabitossaludables.nutricion@outlook.com"
-EMAIL_HOST_PASSWORD="agrassini1988"
-#"anita990"
+EMAIL_HOST_PASSWORD="iketfglghftmfmmw"
+#"Se debe crear en gmail segundo factor de autenticación, luego ir -contraseñas de aplicación- y crear una con nombre personalizado -smtp-. Esa contraseña pegarla acá"
