@@ -1,16 +1,28 @@
+<!-- Debemos copiar el mismo contenido del html del Blog o servicios (dentro del buclo for se copia) -->
 {% extends 'ProyectoWebApp/base.html' %}  <!-- Aca se especifica la ruta de donde va heredar las plantillas -->
 
 {% load static %}  <!-- Aca se dice que cargue todo lo que está en la carpeta static -->
 
-
 {% block contenido %} <!-- Aca se dice que cargue todo lo que está en la carpeta static -->
-<html>
-<body>
-
-Tienda
 
 
-</body>
-</html>
+<!-- Con esto, antes del bucle for, le decimos que todo lo que se produzca dentro del bucle tiene que tener formato de hilera y no columna-->
+<div class="row">
 
+{% for producto in productos %} <!-- Aca recorrera los produtos. -->
+
+<div class="card" style="width: 10%;">  <!-- con esto le damos el estilo de "tarjeta" a la imagen y con el style width achicamos su valor a un 10% del tamaño orginal. -->
+    <img src="{{producto.imagen.url}}"> 
+</div>
+
+
+
+
+{% endfor %}
+
+</div>
 {% endblock contenido %}
+
+{{producto.nombre}}
+{{producto.precio}}
+ 

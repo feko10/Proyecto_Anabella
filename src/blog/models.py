@@ -18,7 +18,7 @@ class Categoria(models.Model): #Se crea una clase, y esa clase como tal hereda d
     
 class Post(models.Model): 
     titulo=models.CharField(max_length=50) #Aca nombramos un registro (titulo) y le asignamos un tipo de valor (cuadro de texto -Charfield-)
-    contenido=models.CharField(max_length=100)
+    contenido=models.CharField(max_length=250)
     imagen=models.ImageField(upload_to='blog', null=True, blank=True) #Este campo upload_to sirve para que cuando se cargue una imagen, se suba a la carpeta que indicamos dentro de "media" que se designo en settings. No es necesario crear la carpeta servicios previamente, si la de media. EL NULL Y BLANK = TRUE, signfica que el ingreso de imagen es opcional y no obligatorio!
     autor=models.ForeignKey(User, on_delete=models.CASCADE) #Con la creación de esta variable se pide que el autor, que pertence a un FK, al borrarlo, borre todos sus modelos en cascada (sus blogs basicamente)
     categorias=models.ManyToManyField(Categoria) #Con esto creamos un campo que relaciona esta clase, con la de Categorias, en una relación de varios a varios, es decir, varios posts, pueden pertenecer a varias categorias
@@ -29,5 +29,6 @@ class Post(models.Model):
     class Meta: 
         verbose_name="post"
         verbose_name_plural="posts"
+
 
    
