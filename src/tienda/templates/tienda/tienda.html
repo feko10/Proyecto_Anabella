@@ -7,22 +7,36 @@
 
 
 <!-- Con esto, antes del bucle for, le decimos que todo lo que se produzca dentro del bucle tiene que tener formato de hilera y no columna-->
-<div class="row">
-
-{% for producto in productos %} <!-- Aca recorrera los produtos. -->
-
-<div class="card" style="width: 10%;">  <!-- con esto le damos el estilo de "tarjeta" a la imagen y con el style width achicamos su valor a un 10% del tamaño orginal. -->
-    <img src="{{producto.imagen.url}}"> 
-</div>
+<div class="container">
+    <div class="row"> <!-- Esta clase crea tarjetas visibles en la tienda -->
 
 
+        {% for producto in productos %} <!-- Aca recorrera los produtos. -->
+                <div class="col-md-4">  <!-- Aca se armas columnas. El código -md4 dice que le agreguemos 4 tarjetas por columna. -->
+
+                <div class="card" style="width: 100%; margin: 5px 5px;">  <!-- con esto le damos el estilo de "tarjeta" a la imagen y con el style width achicamos su valor a un % del tamaño orginal.
+                Con el margin damos margenes a las tarjetas para que genere un espacio, sino ponemos top o bottom abarca los dos. Y si no ponemos "px" abarca todo igual -->
+                    <img src="{{producto.imagen.url}}" class="card-img-top">
+<!-- Con este parte del código se coloca las imagenes carrectamente dentro de cada tarjeta. Recordemos que si los formatos no son adecuados en las tarjetas tendremos que recurrir a la librería de bootstrap y revisar el clase que usamos  -->
+                    <div class="card-body" style="text-align: center;">
+
+                    <h7 class="card-title">{{producto.nombre}}</h7> <!-- la etiqueta h7 es negrita para titulo. -->
+
+                    <p class="card-text">{{producto.precio}}&nbsp;$</p> <!-- &nbsp;$ es para agregar dentro del texto de la tarjeta el simbolo $ -->
+
+                    </div>
+        
+                </div>
+                </div>
 
 
-{% endfor %}
 
+
+        {% endfor %}
+
+    </div>
 </div>
 {% endblock contenido %}
 
-{{producto.nombre}}
-{{producto.precio}}
+
  
